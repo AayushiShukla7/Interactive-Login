@@ -89,6 +89,14 @@ body {
     display: none;
 }
 
+.hidden {
+    display: none;
+}
+  
+.visuallyhidden {
+    opacity: 0;
+}
+
 /* Specific Styles*/
 
 .container {

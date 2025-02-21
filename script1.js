@@ -28,6 +28,19 @@ loginBtn.addEventListener('click', () => {
 const normalFace = document.getElementById("normal-face");
 const angryFace = document.getElementById("angry-face");
 
+function showAngryFace() {
+    // normalFace.style.display = 'none';
+    // angryFace.style.display = 'block';
+
+    normalFace.classList.add('hidden');
+    normalFace.classList.add('visuallyhidden');
+
+    angryFace.classList.remove('hidden');
+    setTimeout(function () {
+        angryFace.classList.remove('visuallyhidden');
+    }, 1000);    
+}
+
 // Validate
 function validateForm() {
     let username = document.forms["myLoginForm"]["username"].value;
@@ -38,23 +51,19 @@ function validateForm() {
     if (username == "" || password == "") {
         //alert("Name & Password must be filled out!");
 
-        normalFace.style.display = 'none';
-        angryFace.style.display = 'block';
-
-        // if(normalFace.style.display === "none"){
-        //     angryFace.style.display = 'none';
-        //     normalFace.style.display = 'block';
-        // }
-        // else{
-        //     normalFace.style.display = 'none';
-        //     angryFace.style.display = 'block';
-        // }
+        setTimeout(showAngryFace);
 
         // Set focus on the empty field
-        if(username == "") 
+        if(username == "")  {            
+            document.getElementById("username").style.border = "2px solid";
+            document.getElementById("username").style.borderColor = "red";
             document.forms["myLoginForm"]["username"].focus();
-        else
+        }
+        else {
+            document.getElementById("password").style.border = "2px solid";
+            document.getElementById("password").style.borderColor = "red";
             document.forms["myLoginForm"]["password"].focus();
+        }
 
         return false;
     }
