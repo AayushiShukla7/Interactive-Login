@@ -94,6 +94,7 @@ body {
 .container {
     position: absolute;
     right: 0;
+    /* position: relative; */
     width: 850px;
     height: 550px;
     background-color: var(--white-color);
@@ -283,6 +284,16 @@ form {
 
 /* Responsive - Media Queries */
 
+/* @media screen and (max-width: 1200px) {
+    .spline-container {
+        display: none;
+    } 
+
+    .container {
+        position: relative;
+    }
+} */
+
 /*  Medium Screens */
 @media screen and (max-width: 732px) {
     .container {
@@ -298,6 +309,10 @@ form {
     .container p {
         font-size: 14.5px;
         margin: 5px 0;
+    }
+
+    .spline-container {
+        display: none;
     }
     
     .form-box {
@@ -369,6 +384,10 @@ form {
 
 /*  Small Screens */
 @media screen and (max-width: 340px) {
+    .spline-container {
+        display: none;
+    }
+
     .form-box {
         padding: 20px;
     }
