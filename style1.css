@@ -10,6 +10,7 @@
     --form-bg: pink;
     --input-box-bg: #eee;
     --dark-grey: #888;
+    --white-color: #fff;
 }
 
 * {
@@ -33,7 +34,7 @@ body {
     position: relative;
     width: 850px;
     height: 550px;
-    background-color: #fff;
+    background-color: var(--white-color);
     border-radius: 30px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
@@ -43,16 +44,27 @@ body {
     margin: -10px 0;
 }
 
+.container p {
+    font-size: 14.5px;
+    margin: 15px 0;
+}
+
 .form-box {
     position: absolute;
     right: 0;       /* Moves the form left/right */
     width: 50%;
     height: 100%;
-    background: var(--form-bg);
+    background: var(--white-color);          /* var(--form-bg); */
     display: flex;
     align-items: center;
     color: var(--font-color);
     text-align: center;
+    padding: 40px;
+    z-index: 1;
+}
+
+.form-box.register {
+    visibility: hidden;
 }
 
 form {
@@ -91,3 +103,68 @@ form {
     color: var(--dark-grey);
 }
 
+.forgot-link {
+    margin: -15px 0 15px;
+}
+
+.forgot-link a {
+    font-size: 14.5px;
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.btn {
+    width: 100%;
+    height: 48px;
+    background: #b089ef;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--white-color);
+    font-weight: 600;
+}
+
+.social-icons a {
+    display: inline-flex;
+    padding: 10px;
+    border: 2px solid var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 24px;
+    color: var(--font-color);
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.toggle-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: purple; */
+}
+
+.toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: rgb(247, 132, 132);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white-color);
+}
+
+.toggle-panel p {
+    margin-bottom: 20px;
+}
+
+.toggle-panel .btn {
+    width: 160px;
+    height: 46px;
+    background: transparent;
+    border: 2px solid var(--white-color);
+    box-shadow: none;
+}
