@@ -29,71 +29,10 @@ body {
     background: var(--bg-gradient);
 }
 
-/* Loader */
-
-.loadingScreen {
-    position: absolute;
-    z-index: 5;
-    width: 100vw;
-    height: 100vh;
-    background-color: #c7b5d8;
-    color: rgb(0, 0, 0);
-    font-size: large;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.loader {
-    width: fit-content;
-    aspect-ratio: 1;
-    padding: 10px;
-    box-sizing: border-box;
-    display: grid;
-    background: #fff;
-    filter: blur(0.5px) contrast(7) hue-rotate(290deg);
-    mix-blend-mode: darken;
-}
-
-.loader:before {
-    content: "";
-    margin: auto;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    color: #ff0000;
-    background: currentColor;
-    box-shadow: -30px 0,30px 0,0 30px, 0 -30px;
-    animation: l6 3s infinite alternate;
-}
-
-@keyframes l6{
-    90%,100% {box-shadow: -10px 0,10px 0,0 10px, 0 -10px;transform: rotate(180deg)}
-}
-
-/* Spline Styles */
-
-.spline-container {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-}
-
-.show {
-    display: block;
-}
-
-.hide {
-    display: none;
-}
-
 /* Specific Styles*/
 
 .container {
-    position: absolute;
-    right: 0;
+    position: relative;
     width: 850px;
     height: 550px;
     background-color: var(--white-color);
