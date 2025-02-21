@@ -222,6 +222,7 @@ form {
 
 /* Responsive - Media Queries */
 
+/*  Medium Screens */
 @media screen and (max-width: 732px) {
     .container {
         height: calc(100vh -20px);
@@ -270,6 +271,7 @@ form {
         height: 300%;
         left: 0;
         top: -270%;
+        border-radius: 20vw;
     }
 
     .container.active .toggle-box::before {
@@ -301,5 +303,16 @@ form {
     .container.active .toggle-panel.toggle-right {
         bottom: 0;
         transform: scale(0.9);
+    }
+}
+
+/*  Small Screens */
+@media screen and (max-width: 340px) {
+    .form-box {
+        padding: 20px;
+    }
+
+    .toggle-panel h1 {
+        font-size: 28px;
     }
 }
